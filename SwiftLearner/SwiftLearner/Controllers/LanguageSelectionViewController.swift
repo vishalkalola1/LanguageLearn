@@ -8,10 +8,6 @@
 
 import UIKit
 
-
-
-
-
 class LanguageSelectionViewController: UIViewController {
 
     @IBOutlet var languageViewHeightConstaints: NSLayoutConstraint!

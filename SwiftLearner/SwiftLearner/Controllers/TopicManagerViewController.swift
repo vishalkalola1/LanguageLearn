@@ -105,17 +105,19 @@ extension TopicManagerViewController: UITableViewDelegate,UITableViewDataSource 
                 self.topicTable.reloadData()
             }else{
                 if let objSubTopic = self.subTopicManagerModelArray[section].objSubTopic {
-                    if objSubTopic[0].SubTopicName != "" {
-                        self.selectedIndex.removeAll()
-                        self.topicTable.reloadData()
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
-                            self.selectedIndex.append(section)
-                            self.animateTable(TableName: self.topicTable, index: section)
-                        })
-                    }else{
-                        let objDataMagerModel = self.subTopicManagerModelArray[section].objSubTopic?[0]
-                        self.titleNextView = self.subTopicManagerModelArray[section].objTopic?.TopicName
-                        self.performSegue(withIdentifier: SegueId.segueSubTopicManager, sender: objDataMagerModel)
+                    if objSubTopic.count > 0 {
+                        if objSubTopic[0].SubTopicName != "" {
+                            self.selectedIndex.removeAll()
+                            self.topicTable.reloadData()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.1, execute: {
+                                self.selectedIndex.append(section)
+                                self.animateTable(TableName: self.topicTable, index: section)
+                            })
+                        }else{
+                            let objDataMagerModel = self.subTopicManagerModelArray[section].objSubTopic?[0]
+                            self.titleNextView = self.subTopicManagerModelArray[section].objTopic?.TopicName
+                            self.performSegue(withIdentifier: SegueId.segueSubTopicManager, sender: objDataMagerModel)
+                        }
                     }
                 }
             }

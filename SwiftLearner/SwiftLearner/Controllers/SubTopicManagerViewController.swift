@@ -18,8 +18,11 @@ class SubTopicManagerViewController: BaseViewController {
         super.viewDidLoad()
         self.lblTitle.text = titleText
         
-        let url = Bundle.main.url(forResource: "privacy", withExtension: "html")
+        //let url = Bundle.main.url(forResource: "File", withExtension: "html")
         
+        //let request = URLRequest(url: URL(fileURLWithPath: url!.path))
+        
+        //webVIew.loadRequest(request)
         webVIew.loadHTMLString(dataManagerModel?.SubTopicData ?? "", baseURL: nil)
     }
 
