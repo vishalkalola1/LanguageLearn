@@ -17,6 +17,9 @@ class SubTopicManagerViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lblTitle.text = titleText
+        
+        let url = Bundle.main.url(forResource: "privacy", withExtension: "html")
+        
         webVIew.loadHTMLString(dataManagerModel?.SubTopicData ?? "", baseURL: nil)
     }
 

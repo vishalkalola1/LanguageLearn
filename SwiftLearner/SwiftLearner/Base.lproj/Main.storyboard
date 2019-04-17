@@ -695,9 +695,9 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZLT-sh-yD2">
+                            <webView contentMode="scaleAspectFit" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZLT-sh-yD2">
                                 <rect key="frame" x="0.0" y="64" width="320" height="504"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -708,7 +708,7 @@
                             <constraint firstItem="gu0-i9-h72" firstAttribute="trailing" secondItem="ZLT-sh-yD2" secondAttribute="trailing" id="gDw-6a-nLk"/>
                             <constraint firstItem="ZLT-sh-yD2" firstAttribute="leading" secondItem="gu0-i9-h72" secondAttribute="leading" id="mkn-fg-kNc"/>
                             <constraint firstItem="gu0-i9-h72" firstAttribute="trailing" secondItem="9aY-2C-aFI" secondAttribute="trailing" id="rUG-gF-Yg9"/>
-                            <constraint firstItem="gu0-i9-h72" firstAttribute="bottom" secondItem="ZLT-sh-yD2" secondAttribute="bottom" id="tOh-W2-WGQ"/>
+                            <constraint firstAttribute="bottom" secondItem="ZLT-sh-yD2" secondAttribute="bottom" id="tOh-W2-WGQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gu0-i9-h72"/>
                     </view>
